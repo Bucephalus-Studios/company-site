@@ -9,5 +9,6 @@
 
 .siteNavItem 
 {
+    float : left;
     display: inline;
 }
