@@ -1,0 +1,10 @@
+.navbar
+{
+    display : table-cell;
+}
+
+.navbarItem
+{
+    float : left;
+    padding : 10px;
+}
