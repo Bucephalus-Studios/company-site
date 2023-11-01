@@ -4,11 +4,94 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #555555;
 }
 
 .siteNavItem 
 {
+    font-family: Ubuntu Mono;
+    font-size: large;
     float : left;
     display: inline;
-    padding: 20px;
+    background: #555555;
+    color : #c2c2c2;
+}
+
+.siteNavItem a
+{
+    display: block;
+    color: #c2c2c2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.siteNavItem a:hover
+{
+    color : #ffffff;
+    background-color: #ca6500;
+    transition: 0.6s;
+}
+
+
+.standardButton
+{
+    border: 0px;
+    border-radius: 5px;
+    padding : 10px;
+    color : #ffffff;
+    background-color: #a00;
+    transition : 0.6s;
+}
+
+
+.standardButton:hover
+{
+    color : #ffffff;
+    background-color: #ff5555;
+    transition : 0.6s;
+}
+
+
+#itchBadge img
+{
+    transition : 0.6s;
+}
+
+
+#itchBadge img:hover
+{
+    box-shadow: 0 0 8px rgba(255,0,0, 0.6);
+    transition: 0.6s;
+}
+
+
+.consoleYellow
+{
+    color : #ffff55;
+}
+
+
+.consoleCyan
+{
+    color : #00AAAA;
+}
+
+
+body
+{
+    font-family: Ubuntu Mono;
+    font-size: large;
+    background-color: #191413;
+    color: #c2c2c2;
+}
+
+
+#footer
+{
+    background: #555555;
+    color : #c2c2c2;
+    padding : 30px;
+    margin-top : 45px;
 }
