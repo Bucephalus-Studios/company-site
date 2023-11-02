@@ -79,6 +79,18 @@
 }
 
 
+.consoleMagenta
+{
+    color :  #AA00AA;
+}
+
+
+.consoleRed
+{
+    color : #AA0000;
+}
+
+
 body
 {
     font-family: Ubuntu Mono;
