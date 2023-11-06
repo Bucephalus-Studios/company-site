@@ -96,6 +96,19 @@
     color : #AA0000;
 }
 
+.gameCard
+{
+    border-radius : 5px;
+    background: #555555;
+}
+
+.gameCardContent
+{
+    width : 90%;
+    padding-top : 10px;
+    padding-bottom : 10px;
+}
+
 
 body
 {
