@@ -1,5 +1,6 @@
 #logoImage
 {
+    transition: 0.6s;
 }
 
 #logoImage:hover
@@ -10,10 +11,13 @@
 
 .glowCrimsonOnHover
 {
+    background: #AA0000;
+    transition: 0.6s;
 }
 
 .glowCrimsonOnHover:hover
 {
+    background: #AA0000;
     filter: drop-shadow(0 0 0.75rem crimson);
     transition: 0.6s;
 }
@@ -21,11 +25,14 @@
 
 .glowTurqoiseOnHover
 {
+    background: #00AAAA;
+    transition: 0.6s;
 }
 
 
 .glowTurqoiseOnHover:hover
 {
+    background: #00AAAA;
     filter: drop-shadow(0 0 0.75rem turquoise);
     transition: 0.6s;
 }
