@@ -96,6 +96,11 @@
     color : #AA0000;
 }
 
+.gameCardRow
+{
+    margin-top : 40px;
+}
+
 .gameCard
 {
     border-radius : 5px;
@@ -107,6 +112,13 @@
     width : 90%;
     padding-top : 10px;
     padding-bottom : 10px;
+}
+
+
+.softwareDiv
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
