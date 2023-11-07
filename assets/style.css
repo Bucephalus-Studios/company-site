@@ -35,6 +35,17 @@
 }
 
 
+.siteNavSubscribe
+{
+    font-family: Ubuntu Mono;
+    font-size: large;
+    float : left;
+    display: inline;
+    background: #555555;
+    color : #c2c2c2;
+}
+
+
 .standardButton
 {
     border: 0px;
