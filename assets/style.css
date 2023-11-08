@@ -132,15 +132,15 @@
 }
 
 
-#itchBadge img
+#itchBadge
 {
     transition : 0.6s;
 }
 
 
-#itchBadge img:hover
+#itchBadge:hover
 {
-    box-shadow: 0 0 8px rgba(255,0,0, 0.6);
+    box-shadow: 0 0 30px crimson;
     transition: 0.6s;
 }
 
