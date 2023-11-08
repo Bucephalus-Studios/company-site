@@ -50,7 +50,7 @@
 .siteNavLeft
 {
     font-family: Ubuntu Mono;
-    font-size: large;
+    font-size: 1.5em;
     float : left;
     display: inline;
     background: #555555;
@@ -78,7 +78,7 @@
 .siteNavRight
 {
     font-family: Ubuntu Mono;
-    font-size: large;
+    font-size: 1.5em;
     float : right;
     display: inline;
 }
@@ -195,7 +195,7 @@
 body
 {
     font-family: Ubuntu Mono;
-    font-size: large;
+    font-size: 1em;
     background-color: #191413;
     color: #c2c2c2;
 }
