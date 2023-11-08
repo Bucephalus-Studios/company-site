@@ -103,12 +103,19 @@
 {
     height: 42px;
     border: 0px;
-    border-radius: 10px;
+    border-radius: 7px;
     padding : 10px;
     font-size : 16px;
     color : #ffffff;
-    background-color: linear-gradient(to right,  #FF5555, #AA0000);
+    background: linear-gradient(to right,  #FF5555, #AA0000);
     transition : 0.6s;
+}
+
+
+.subscribeButton:hover
+{
+    box-shadow: 0 0 8px #AA0000;
+    transition: 0.6s; 
 }
 
 
