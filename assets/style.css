@@ -23,17 +23,15 @@
 }
 
 
-.glowTurqoiseOnHover
+.glowCyanOnHover
 {
-    background: #00AAAA;
     transition: 0.6s;
 }
 
 
-.glowTurqoiseOnHover:hover
+.glowCyanOnHover:hover
 {
-    background: #00AAAA;
-    filter: drop-shadow(0 0 0.75rem turquoise);
+    filter: drop-shadow(0 0 0.75rem #0aa);
     transition: 0.6s;
 }
 
