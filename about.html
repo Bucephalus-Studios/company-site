@@ -27,7 +27,123 @@
 
 <body>
     <!--Header layout-->
-    <div id="loaded-header">
+    <div id="header">
+        <div class="d-flex align-items-center">
+            <a href="https://bucephalusstudios.com/">
+                <img src="assets/bucephalus_avatar.png" height="120px" width="120px" style="margin : 20px;" id="logoImage">
+            </a>
+            <h1>Bucephalus Studios</h1>
+        </div>
+        <!-- Navbar -->
+        <ul class="siteNav">
+            <li class="siteNavLeft">
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+            <li class="siteNavLeft">
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+            <li class="siteNavLeft">
+                <a href="games.html">
+                    Games
+                </a>
+            </li>
+            <li class="siteNavLeft">
+                <a href="software.html">
+                    Software
+                </a>
+            </li>
+            <li class="siteNavLeft">
+                <a href="https://linktr.ee/bucephalus_studios" target="_blank">
+                    Links
+                </a>
+            </li>
+            <li class="siteNavLeft">
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+            <!--
+            <div class="siteNavItem">
+                Shop
+            </div>
+            -->
+            <li id="kofiLink" class="siteNavRight">
+                <a href="https://ko-fi.com/bucephalus_studios" target="_blank" style="padding: 0px; margin: 14px 16px;">
+                    <button class="kofiButton">
+                        <div style="position:relative; bottom:6px;">
+                            <img src="assets/kofi_s_logo_nolabel.png" width="42px" height="36px">
+                            Support us on Kofi
+                        </div>
+                    </button>
+                </a>
+            </li>
+            <li class="siteNavRight">
+                <button id="email-list-signup-form-open-btn" class="subscribeButton" data-bs-toggle="modal" data-bs-target="#email-sign-up-modal"
+                        style="margin: 14px 16px;">
+                    <img src="assets/letter-389108_640.png" width="24px" height="16px">
+                    Subscribe to our newsletter
+                </button>
+            </li>
+        </ul>
+        <div>
+            <div class="modal fade" id="email-sign-up-modal" style="display: none;" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <!-- MAILCHIMP EMAIL LIST SIGNUP FORM -->
+                        <div id="mc_embed_shell">
+                            <div id="mc_embed_signup">
+                                <form
+                                    action="https://itch.us21.list-manage.com/subscribe/post?u=7c42aee1abcb8f5e88af6fe06&amp;id=4a251f5c49&amp;f_id=0067e6e6f0"
+                                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                                    target="_blank">
+                                    <div id="mc_embed_signup_scroll">
+                                        <h2>Subscribe to updates from Bucephalus Studios</h2>
+                                        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                                        <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
+                                                    class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email"
+                                                id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                                        </div>
+                                        <div id="mce-responses" class="clear foot">
+                                            <div class="response" id="mce-error-response" style="display: none;"></div>
+                                            <div class="response" id="mce-success-response" style="display: none;"></div>
+                                        </div>
+                                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                            /* real people should not fill this in and expect good things - do not remove this or risk form bot
+                                            signups */
+                                            <input type="text" name="b_7c42aee1abcb8f5e88af6fe06_4a251f5c49" tabindex="-1" value="">
+                                        </div>
+                                        <div class="optionalParent">
+                                            <div class="clear foot">
+                                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn standardButton"
+                                                    value="Subscribe">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                            <script
+                                type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--View-->
@@ -79,7 +195,7 @@
                 <br />
                 Favorite stuff:
                 <ul>
-                    <li>Game: Planescape: Torment</li>
+                    <li>Game: Planescape Torment</li>
                     <li>Movie: Whiplash</li>
                     <li>Music: Ghost Love Score by Nightwish</li>
                     <li>Book: Tress of The Emerald Sea</li>
@@ -92,11 +208,14 @@
 
 
     <div id="loaded-footer">
+        <div id="footer" align="center">
+            Copyright Bucephalus Studios 2025
+        </div>
     </div>
 
     <!-- Add javascript before the end of the body -->
-    <script type="text/javascript" src="js/headerLoader.js"></script>
-    <script type="text/javascript" src="js/footerLoader.js"></script>
+    <!-- <script type="text/javascript" src="js/headerLoader.js"></script>
+    <script type="text/javascript" src="js/footerLoader.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
