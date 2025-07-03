@@ -184,7 +184,7 @@
                         .then(response => response.json())
                         .then(repo => {
                             const license = repo.license && repo.license.spdx_id && repo.license.spdx_id !== "NOASSERTION"
-                                ? `<a href="https://choosealicense.com/licenses/${repo.license.spdx_id.toLowerCase()}/" target="_blank">${repo.license.spdx_id}</a>`
+                                ? `<a href="${repo.html_url}/blob/${repo.default_branch}/LICENSE" target="_blank">${repo.license.spdx_id}</a>`
                                 : 'N/A';
                             document.getElementById('repo-info-stevensStringLib').innerHTML = `
                             <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
@@ -207,7 +207,7 @@
                         .then(response => response.json())
                         .then(repo => {
                             const license = repo.license && repo.license.spdx_id && repo.license.spdx_id !== "NOASSERTION"
-                                ? `<a href="https://choosealicense.com/licenses/${repo.license.spdx_id.toLowerCase()}/" target="_blank">${repo.license.spdx_id}</a>`
+                                ? `<a href="${repo.html_url}/blob/${repo.default_branch}/LICENSE" target="_blank">${repo.license.spdx_id}</a>`
                                 : 'N/A';
                             document.getElementById('repo-info-stevensVectorLib').innerHTML = `
                             <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
@@ -230,7 +230,7 @@
                         .then(response => response.json())
                         .then(repo => {
                             const license = repo.license && repo.license.spdx_id && repo.license.spdx_id !== "NOASSERTION"
-                                ? `<a href="https://choosealicense.com/licenses/${repo.license.spdx_id.toLowerCase()}/" target="_blank">${repo.license.spdx_id}</a>`
+                                ? `<a href="${repo.html_url}/blob/${repo.default_branch}/LICENSE" target="_blank">${repo.license.spdx_id}</a>`
                                 : 'N/A';
                             document.getElementById('repo-info-stevensMapLib').innerHTML = `
                             <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
