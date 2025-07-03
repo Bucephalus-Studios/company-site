@@ -190,7 +190,7 @@
                             `;
                         })
                         .catch(() => {
-                            document.getElementById('repo-info').innerHTML = `
+                            document.getElementById('repo-info-stevensStringLib').innerHTML = `
                             <p>Could not load repository info. <a href="https://github.com/Bucephalus-Studios/stevensStringLib" target="_blank">View on GitHub</a></p>
                             `;
                         });
@@ -199,7 +199,7 @@
                     <div class="softwareDiv">
                         <div id="repo-info-stevensVectorLib"></div>
                         <script>
-                        fetch('https://api.github.com/repos/Bucephalus-Studios/stevensVectirLib')
+                        fetch('https://api.github.com/repos/Bucephalus-Studios/stevensVectorLib')
                         .then(response => response.json())
                         .then(repo => {
                             document.getElementById('repo-info-stevensVectorLib').innerHTML = `
@@ -209,8 +209,27 @@
                             `;
                         })
                         .catch(() => {
-                            document.getElementById('repo-info').innerHTML = `
+                            document.getElementById('repo-info-stevensVectorLib').innerHTML = `
                             <p>Could not load repository info. <a href="https://github.com/Bucephalus-Studios/stevensVectorLib" target="_blank">View on GitHub</a></p>
+                            `;
+                        });
+                        </script>
+                    </div>
+                    <div class="softwareDiv">
+                        <div id="repo-info-stevensMapLib"></div>
+                        <script>
+                        fetch('https://api.github.com/repos/Bucephalus-Studios/stevensMapLib')
+                        .then(response => response.json())
+                        .then(repo => {
+                            document.getElementById('repo-info-stevensMapLib').innerHTML = `
+                            <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+                            <p>${repo.description}</p>
+                            <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
+                            `;
+                        })
+                        .catch(() => {
+                            document.getElementById('repo-info-stevensMapLib').innerHTML = `
+                            <p>Could not load repository info. <a href="https://github.com/Bucephalus-Studios/stevensMapLib" target="_blank">View on GitHub</a></p>
                             `;
                         });
                         </script>
