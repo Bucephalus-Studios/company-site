@@ -178,7 +178,7 @@
                     </div>
                     -->
                     <div class="softwareDiv">
-                        <div id="repo-info-stevensStringLib"></div>
+                        <div id="repo-info-stevensStringLib">Loading repository info...</div>
                         <script>
                         fetch('https://api.github.com/repos/Bucephalus-Studios/stevensStringLib')
                         .then(response => response.json())
@@ -187,6 +187,7 @@
                             <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
                             <p>${repo.description}</p>
                             <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
+                            <p>📄 License: ${repo.license ? repo.license.spdx_id : 'N/A'}</p>
                             `;
                         })
                         .catch(() => {
@@ -197,7 +198,7 @@
                         </script>
                     </div>
                     <div class="softwareDiv">
-                        <div id="repo-info-stevensVectorLib"></div>
+                        <div id="repo-info-stevensVectorLib">Loading repository info...</div>
                         <script>
                         fetch('https://api.github.com/repos/Bucephalus-Studios/stevensVectorLib')
                         .then(response => response.json())
@@ -206,6 +207,7 @@
                             <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
                             <p>${repo.description}</p>
                             <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
+                            <p>📄 License: ${repo.license ? repo.license.spdx_id : 'N/A'}</p>
                             `;
                         })
                         .catch(() => {
@@ -216,7 +218,7 @@
                         </script>
                     </div>
                     <div class="softwareDiv">
-                        <div id="repo-info-stevensMapLib"></div>
+                        <div id="repo-info-stevensMapLib">Loading repository info...</div>
                         <script>
                         fetch('https://api.github.com/repos/Bucephalus-Studios/stevensMapLib')
                         .then(response => response.json())
@@ -225,6 +227,7 @@
                             <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
                             <p>${repo.description}</p>
                             <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
+                            <p>📄 License: ${repo.license ? repo.license.spdx_id : 'N/A'}</p>
                             `;
                         })
                         .catch(() => {
