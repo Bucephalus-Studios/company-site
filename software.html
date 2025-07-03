@@ -178,6 +178,18 @@
                     </div>
                     -->
                     <div class="softwareDiv">
+                        <div id="repo-info"></div>
+                        <script>
+                        fetch('https://api.github.com/repos/Bucephalus-Studios/stevensStringLib')
+                        .then(response => response.json())
+                        .then(repo => {
+                            document.getElementById('repo-info').innerHTML = `
+                            <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+                            <p>${repo.description}</p>
+                            <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
+                            `;
+                        });
+                        </script>
                         <h4>
                             <a href="https://github.com/Bucephalus-Studios/stevensStringLib">stevensStringLib</a> 
                         </h4>
