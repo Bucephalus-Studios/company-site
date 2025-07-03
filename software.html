@@ -183,11 +183,14 @@
                         fetch('https://api.github.com/repos/Bucephalus-Studios/stevensStringLib')
                         .then(response => response.json())
                         .then(repo => {
+                            const license = repo.license && repo.license.spdx_id && repo.license.spdx_id !== "NOASSERTION"
+                                ? `<a href="https://choosealicense.com/licenses/${repo.license.spdx_id.toLowerCase()}/" target="_blank">${repo.license.spdx_id}</a>`
+                                : 'N/A';
                             document.getElementById('repo-info-stevensStringLib').innerHTML = `
                             <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
                             <p>${repo.description}</p>
                             <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
-                            <p>📄 License: ${repo.license ? repo.license.spdx_id : 'N/A'}</p>
+                            <p>📄 License: ${license}</p>
                             `;
                         })
                         .catch(() => {
@@ -203,11 +206,14 @@
                         fetch('https://api.github.com/repos/Bucephalus-Studios/stevensVectorLib')
                         .then(response => response.json())
                         .then(repo => {
+                            const license = repo.license && repo.license.spdx_id && repo.license.spdx_id !== "NOASSERTION"
+                                ? `<a href="https://choosealicense.com/licenses/${repo.license.spdx_id.toLowerCase()}/" target="_blank">${repo.license.spdx_id}</a>`
+                                : 'N/A';
                             document.getElementById('repo-info-stevensVectorLib').innerHTML = `
                             <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
                             <p>${repo.description}</p>
                             <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
-                            <p>📄 License: ${repo.license ? repo.license.spdx_id : 'N/A'}</p>
+                            <p>📄 License: ${license}</p>
                             `;
                         })
                         .catch(() => {
@@ -223,11 +229,14 @@
                         fetch('https://api.github.com/repos/Bucephalus-Studios/stevensMapLib')
                         .then(response => response.json())
                         .then(repo => {
+                            const license = repo.license && repo.license.spdx_id && repo.license.spdx_id !== "NOASSERTION"
+                                ? `<a href="https://choosealicense.com/licenses/${repo.license.spdx_id.toLowerCase()}/" target="_blank">${repo.license.spdx_id}</a>`
+                                : 'N/A';
                             document.getElementById('repo-info-stevensMapLib').innerHTML = `
                             <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
                             <p>${repo.description}</p>
                             <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
-                            <p>📄 License: ${repo.license ? repo.license.spdx_id : 'N/A'}</p>
+                            <p>📄 License: ${license}</p>
                             `;
                         })
                         .catch(() => {
