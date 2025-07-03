@@ -178,38 +178,42 @@
                     </div>
                     -->
                     <div class="softwareDiv">
-                        <div id="repo-info"></div>
+                        <div id="repo-info-stevensStringLib"></div>
                         <script>
                         fetch('https://api.github.com/repos/Bucephalus-Studios/stevensStringLib')
                         .then(response => response.json())
                         .then(repo => {
-                            document.getElementById('repo-info').innerHTML = `
+                            document.getElementById('repo-info-stevensStringLib').innerHTML = `
                             <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
                             <p>${repo.description}</p>
                             <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
                             `;
+                        })
+                        .catch(() => {
+                            document.getElementById('repo-info').innerHTML = `
+                            <p>Could not load repository info. <a href="https://github.com/Bucephalus-Studios/stevensStringLib" target="_blank">View on GitHub</a></p>
+                            `;
                         });
                         </script>
-                        <h4>
-                            <a href="https://github.com/Bucephalus-Studios/stevensStringLib">stevensStringLib</a> 
-                        </h4>
-                        <div>
-                            <span class="consoleCyan">Version 1.1</span>
-                            <br/>
-                            An easy-to-use library of C++ string functions that make your life easier! Comparable to boost,
-                            but sports some of its own unique functions. Additionally, contained all within a single header file.
-                        </div>
                     </div>
                     <div class="softwareDiv">
-                        <h4>
-                            <a href="https://github.com/Bucephalus-Studios/stevensVectorLib">stevensVectorLib</a> 
-                        </h4>
-                        <div>
-                            <span class="consoleCyan">Alpha version</span>
-                            <br/>
-                            A C++ std::vector library that is simple and powerful. Currently posted us a working, non-full release version.
-                            Eventually, the full version with tests, benchmarks, documentation, and more will be posted.
-                        </div>
+                        <div id="repo-info-stevensVectorLib"></div>
+                        <script>
+                        fetch('https://api.github.com/repos/Bucephalus-Studios/stevensVectirLib')
+                        .then(response => response.json())
+                        .then(repo => {
+                            document.getElementById('repo-info-stevensVectorLib').innerHTML = `
+                            <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+                            <p>${repo.description}</p>
+                            <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
+                            `;
+                        })
+                        .catch(() => {
+                            document.getElementById('repo-info').innerHTML = `
+                            <p>Could not load repository info. <a href="https://github.com/Bucephalus-Studios/stevensVectorLib" target="_blank">View on GitHub</a></p>
+                            `;
+                        });
+                        </script>
                     </div>
                 </div>
             </div>
