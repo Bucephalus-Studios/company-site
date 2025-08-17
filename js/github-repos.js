@@ -1,3 +1,10 @@
+// Documentation mapping - maps repo names to their local documentation paths
+const DOCS_MAPPING = {
+    'stevensStringLib': 'softwareDocs/stevensStringLibDocs/index.html'
+    // Add more repos here as you create their documentation
+    // 'repoName': 'softwareDocs/repoNameDocs/index.html'
+};
+
 async function fetchGitHubRepos() {
     try {
         // Fetch all public repositories from Bucephalus Studios
@@ -66,6 +73,7 @@ function createRepoCard(repo) {
                 <a href="${repo.html_url}" target="_blank" class="repo-button" style="display: inline-block; padding: 8px 16px; background: linear-gradient(to right, #13c3ff, #1371ff); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 14px; transition: 0.3s;">
                     View on GitHub
                 </a>
+                ${DOCS_MAPPING[repo.name] ? `<a href="${DOCS_MAPPING[repo.name]}" target="_blank" class="docs-button" style="display: inline-block; padding: 8px 16px; background: linear-gradient(to right, #28a745, #20c997); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 14px; margin-left: 10px; transition: 0.3s;">Documentation</a>` : ''}
                 ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" class="demo-button" style="display: inline-block; padding: 8px 16px; background: linear-gradient(to right, #FF5555, #AA0000); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 14px; margin-left: 10px; transition: 0.3s;">Live Demo</a>` : ''}
             </div>
         </div>
