@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['install_0',['Install',['../md__2home_2jeff_2stevensStringLib_2README.html#autotoc_md2',1,'']]],
-  ['installation_1',['Easy Installation!',['../md__2home_2jeff_2stevensStringLib_2README.html#autotoc_md10',1,'']]],
-  ['installation_20and_20usage_3a_2',['Simple installation and usage:',['../md__2home_2jeff_2stevensStringLib_2README.html#autotoc_md1',1,'']]],
+  ['install_0',['Install',['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html#autotoc_md2',1,'']]],
+  ['installation_1',['Easy Installation!',['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html#autotoc_md10',1,'']]],
+  ['installation_20and_20usage_3a_2',['Simple installation and usage:',['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html#autotoc_md1',1,'']]],
   ['isfloat_3',['isFloat',['../stevensStringLib_8h.html#a31ee6720d9d0028eb7891e9360b6c68a',1,'stevensStringLib']]],
   ['isinteger_4',['isInteger',['../stevensStringLib_8h.html#a8eccf0d2f3d7970fc342f4c2faac274a',1,'stevensStringLib']]],
   ['isnumber_5',['isNumber',['../stevensStringLib_8h.html#ac011598c8d05818536e48fd96ca2b12d',1,'stevensStringLib']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['easy_20installation_0',['Easy Installation!',['../md__2home_2jeff_2stevensStringLib_2README.html#autotoc_md10',1,'']]],
+  ['easy_20installation_0',['Easy Installation!',['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html#autotoc_md10',1,'']]],
   ['endswith_1',['endsWith',['../stevensStringLib_8h.html#acb69a84e86b3cd194600e38aff7c2f19',1,'stevensStringLib']]],
   ['erasecharsfromend_2',['eraseCharsFromEnd',['../stevensStringLib_8h.html#ad3dfd6d4329ab7bf69fb1cfd475508c7',1,'stevensStringLib']]],
   ['erasecharsfromstart_3',['eraseCharsFromStart',['../stevensStringLib_8h.html#a9b92ac54e4eb76eb32d7fd7ccd0f8de3',1,'stevensStringLib']]],
