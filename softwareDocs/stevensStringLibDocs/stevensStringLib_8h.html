@@ -180,6 +180,10 @@ Functions</h2></td></tr>
 <tr class="separator:a2b47e1f40ebd4981204774150011271e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5764a0e40220ec9fb06b6ce14e3d949" id="r_aa5764a0e40220ec9fb06b6ce14e3d949"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#aa5764a0e40220ec9fb06b6ce14e3d949">stevensStringLib::utf8Resize</a> (const std::string_view &amp;utf8Str, size_t desiredLength, char fillChar=' ')</td></tr>
 <tr class="separator:aa5764a0e40220ec9fb06b6ce14e3d949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cee8f21ec68884f226068c732820321" id="r_a7cee8f21ec68884f226068c732820321"><td class="memItemLeft" align="right" valign="top">std::u32string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a7cee8f21ec68884f226068c732820321">stevensStringLib::utf8to32</a> (const std::string_view &amp;utf8Str)</td></tr>
+<tr class="separator:a7cee8f21ec68884f226068c732820321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad855311a58d85b0874007beff5030490" id="r_ad855311a58d85b0874007beff5030490"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#ad855311a58d85b0874007beff5030490">stevensStringLib::utf32to8</a> (const std::u32string_view &amp;utf32Str)</td></tr>
+<tr class="separator:ad855311a58d85b0874007beff5030490"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae775d89cee34ccaaf5c144f2266f4eaf" id="r_ae775d89cee34ccaaf5c144f2266f4eaf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#ae775d89cee34ccaaf5c144f2266f4eaf">stevensStringLib::circularIndex</a> (const std::string_view &amp;str, size_t i)</td></tr>
 <tr class="separator:ae775d89cee34ccaaf5c144f2266f4eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bbbc5f9915fcdea95ccd3536d77964b" id="r_a5bbbc5f9915fcdea95ccd3536d77964b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a5bbbc5f9915fcdea95ccd3536d77964b">stevensStringLib::getWhitespaceString</a> (const std::locale &amp;loc)</td></tr>
@@ -2340,6 +2344,45 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="ad855311a58d85b0874007beff5030490" name="ad855311a58d85b0874007beff5030490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad855311a58d85b0874007beff5030490">&#9670;&#160;</a></span>utf32to8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string stevensStringLib::utf32to8 </td>
+          <td>(</td>
+          <td class="paramtype">const std::u32string_view &amp;&#160;</td>
+          <td class="paramname"><em>utf32Str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Encode a std::u32string (one Unicode codepoint per element) into a UTF-8 encoded std::string. Thin wrapper around utf8cpp's utf8::utf32to8() - named to match it directly. The inverse of utf8to32() - see that function's doc comment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">utf32Str</td><td>- A std::u32string of Unicode codepoints.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">std::string</td><td>- The same characters, UTF-8 encoded. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a2b47e1f40ebd4981204774150011271e" name="a2b47e1f40ebd4981204774150011271e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b47e1f40ebd4981204774150011271e">&#9670;&#160;</a></span>utf8Length()</h2>
 
@@ -2432,6 +2475,46 @@ template&lt;typename T &gt; </div>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">std::string</td><td>- utf8Str resized to desiredLength codepoints. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7cee8f21ec68884f226068c732820321" name="a7cee8f21ec68884f226068c732820321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cee8f21ec68884f226068c732820321">&#9670;&#160;</a></span>utf8to32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::u32string stevensStringLib::utf8to32 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view &amp;&#160;</td>
+          <td class="paramname"><em>utf8Str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decode a UTF-8 encoded std::string into a std::u32string, one element per Unicode codepoint. Thin wrapper around utf8cpp's utf8::utf8to32() - named to match it directly.</p>
+<p>Intended for callers (e.g. stevensTerminal's word-wrap logic) that need to do several character-position operations (length, rfind, substr) on the same string - decoding once and working in std::u32string (where those operations are correct and native, no per-call wrapper needed) is both simpler and cheaper than converting on every individual operation. Encode back with utf32to8() before the string leaves the caller's function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">utf8Str</td><td>- A UTF-8 encoded std::string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">std::u32string</td><td>- The same characters, one char32_t codepoint per element. </td></tr>
   </table>
   </dd>
 </dl>
