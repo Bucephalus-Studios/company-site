@@ -93,6 +93,7 @@ $(function() {
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;random&gt;</code><br />
+<code>#include &lt;utf8.h&gt;</code><br />
 </div>
 <p><a href="stevensStringLib_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -175,8 +176,12 @@ Functions</h2></td></tr>
 <tr class="separator:af737e054dda2d8cc062e45c288304b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13c805758cc20928ee0473b0e0f05b85" id="r_a13c805758cc20928ee0473b0e0f05b85"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a13c805758cc20928ee0473b0e0f05b85">stevensStringLib::wrapToWidth</a> (const std::string &amp;str, size_t wrapWidth)</td></tr>
 <tr class="separator:a13c805758cc20928ee0473b0e0f05b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1438c0d1b2a167041cbb2f3f95e5220d" id="r_a1438c0d1b2a167041cbb2f3f95e5220d"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a1438c0d1b2a167041cbb2f3f95e5220d">stevensStringLib::circularIndex</a> (const std::string_view &amp;str, size_t i)</td></tr>
-<tr class="separator:a1438c0d1b2a167041cbb2f3f95e5220d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b47e1f40ebd4981204774150011271e" id="r_a2b47e1f40ebd4981204774150011271e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a2b47e1f40ebd4981204774150011271e">stevensStringLib::utf8Length</a> (const std::string_view &amp;utf8Str)</td></tr>
+<tr class="separator:a2b47e1f40ebd4981204774150011271e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5764a0e40220ec9fb06b6ce14e3d949" id="r_aa5764a0e40220ec9fb06b6ce14e3d949"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#aa5764a0e40220ec9fb06b6ce14e3d949">stevensStringLib::utf8Resize</a> (const std::string_view &amp;utf8Str, size_t desiredLength, char fillChar=' ')</td></tr>
+<tr class="separator:aa5764a0e40220ec9fb06b6ce14e3d949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae775d89cee34ccaaf5c144f2266f4eaf" id="r_ae775d89cee34ccaaf5c144f2266f4eaf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#ae775d89cee34ccaaf5c144f2266f4eaf">stevensStringLib::circularIndex</a> (const std::string_view &amp;str, size_t i)</td></tr>
+<tr class="separator:ae775d89cee34ccaaf5c144f2266f4eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bbbc5f9915fcdea95ccd3536d77964b" id="r_a5bbbc5f9915fcdea95ccd3536d77964b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a5bbbc5f9915fcdea95ccd3536d77964b">stevensStringLib::getWhitespaceString</a> (const std::locale &amp;loc)</td></tr>
 <tr class="separator:a5bbbc5f9915fcdea95ccd3536d77964b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fe6e850aed7869e0cf82a93c42820c1" id="r_a3fe6e850aed7869e0cf82a93c42820c1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a3fe6e850aed7869e0cf82a93c42820c1">stevensStringLib::trimWhitespace</a> (const std::string &amp;str)</td></tr>
@@ -342,8 +347,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1438c0d1b2a167041cbb2f3f95e5220d" name="a1438c0d1b2a167041cbb2f3f95e5220d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1438c0d1b2a167041cbb2f3f95e5220d">&#9670;&#160;</a></span>circularIndex()</h2>
+<a id="ae775d89cee34ccaaf5c144f2266f4eaf" name="ae775d89cee34ccaaf5c144f2266f4eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae775d89cee34ccaaf5c144f2266f4eaf">&#9670;&#160;</a></span>circularIndex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,7 +357,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char stevensStringLib::circularIndex </td>
+          <td class="memname">std::string stevensStringLib::circularIndex </td>
           <td>(</td>
           <td class="paramtype">const std::string_view &amp;&#160;</td>
           <td class="paramname"><em>str</em>, </td>
@@ -375,19 +380,20 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Given a std::string and an integer representing an index, return a single character from the std::string by the process of circular indexing.</p>
-<p>Circular indexing is performed by indexing over the std::string from left to right. Once the index exceeds the length of the string, we begin indexing again from the lefthand side of the std::string and repeat the process until we stop at the final index. We return the character at that final index.</p>
-<p>Example: circularIndex("Hello world!", 13) returns 'e', as we loop around to 'H' at 12 and index one space further to reach 'e'.</p>
+<p>Given a std::string and an integer representing an index, return a single character (which may be a multi-byte UTF-8 codepoint, e.g. a box-drawing glyph) from the std::string by the process of circular indexing.</p>
+<p>Circular indexing is performed by indexing over the std::string's Unicode codepoints from left to right. Once the index exceeds the number of codepoints, we begin indexing again from the lefthand side of the std::string and repeat the process until we stop at the final index. We return the character at that final index.</p>
+<p>Example: circularIndex("Hello world!", 13) returns "e", as we loop around to 'H' at 12 and index one space further to reach 'e'.</p>
+<p>Indexes by codepoint (via utf8cpp's utf8::utf8to32()) rather than by byte, so a raw str[i % str.length()] can't tear a multi-byte character (e.g. one byte of "═") in half.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>- The std::string we are circularly indexing through. </td></tr>
-    <tr><td class="paramname">i</td><td>- The index of the std::string to circularly index to.</td></tr>
+    <tr><td class="paramname">i</td><td>- The codepoint index of the std::string to circularly index to.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">char</td><td>- A character found in str that has been circularly indexed to at position i </td></tr>
+    <tr><td class="paramname">std::string</td><td>- The (possibly multi-byte) UTF-8 character found in str that has been circularly indexed to at codepoint position i </td></tr>
   </table>
   </dd>
 </dl>
@@ -2331,6 +2337,104 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Variant of mapifyString that works for std::unordered_maps </p>
+
+</div>
+</div>
+<a id="a2b47e1f40ebd4981204774150011271e" name="a2b47e1f40ebd4981204774150011271e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b47e1f40ebd4981204774150011271e">&#9670;&#160;</a></span>utf8Length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t stevensStringLib::utf8Length </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view &amp;&#160;</td>
+          <td class="paramname"><em>utf8Str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the number of Unicode codepoints (characters) in a UTF-8 encoded std::string.</p>
+<p>Unlike std::string::length()/size(), which count bytes, this counts characters - a single multi-byte character (Cyrillic, CJK, box-drawing glyphs, etc.) counts as 1, not 2-4. Backed by utf8cpp, which throws utf8::invalid_utf8 on malformed input rather than silently miscounting.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">utf8Str</td><td>- A UTF-8 encoded std::string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">size_t</td><td>- The number of codepoints (characters) in utf8Str. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa5764a0e40220ec9fb06b6ce14e3d949" name="aa5764a0e40220ec9fb06b6ce14e3d949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5764a0e40220ec9fb06b6ce14e3d949">&#9670;&#160;</a></span>utf8Resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string stevensStringLib::utf8Resize </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view &amp;&#160;</td>
+          <td class="paramname"><em>utf8Str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>desiredLength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>fillChar</em> = <code>'&#160;'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Resize a UTF-8 encoded std::string by Unicode codepoint count rather than byte count - the character-counting equivalent of std::string::resize().</p>
+<p>std::string::resize() truncates/pads by byte count, so on multi-byte content (Cyrillic, CJK, box-drawing glyphs) it can both tear a character in half when truncating and pad to the wrong displayed width when growing. This truncates/pads by codepoint instead, so the resulting string's codepoint count always matches desiredLength exactly, with no torn characters.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">utf8Str</td><td>- A UTF-8 encoded std::string to resize. </td></tr>
+    <tr><td class="paramname">desiredLength</td><td>- The desired number of codepoints (characters) in the result. </td></tr>
+    <tr><td class="paramname">fillChar</td><td>- The (single-byte) character to pad with if growing the string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">std::string</td><td>- utf8Str resized to desiredLength codepoints. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
