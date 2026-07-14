@@ -8,9 +8,10 @@ var searchData=
   ['startswith_5',['startsWith',['../stevensStringLib_8h.html#a608c79000fd38c904b100d5cf9120299',1,'stevensStringLib']]],
   ['stevensstringlib_6',['stevensStringLib',['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html',1,'']]],
   ['stevensstringlib_2eh_7',['stevensStringLib.h',['../stevensStringLib_8h.html',1,'']]],
-  ['string_20to_20a_20certain_20width_3a_8',['Wrap a string to a certain width:',['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html#autotoc_md8',1,'']]],
-  ['string_3a_9',['string:',['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html#autotoc_md7',1,'Remove all whitespace from a string:'],['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html#autotoc_md6',1,'Separate a string:']]],
-  ['stringifymap_10',['stringifyMap',['../stevensStringLib_8h.html#a6d11bd6e262a33a72a8bf8ea3e2d2829',1,'stevensStringLib']]],
-  ['stringtobool_11',['stringToBool',['../stevensStringLib_8h.html#a66cee1aced824a0f8ee615dbf7035478',1,'stevensStringLib']]],
-  ['systems_20llc_20beldum_5fpackage_5fmanager_12',['Beldum Package Manager: https://github.com/Nord-Tech-Systems-LLC/beldum_package_manager',['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html#autotoc_md3',1,'']]]
+  ['stevensstringlib_3a_3adetail_8',['detail',['../namespacestevensStringLib_1_1detail.html',1,'stevensStringLib']]],
+  ['string_20to_20a_20certain_20width_3a_9',['Wrap a string to a certain width:',['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html#autotoc_md8',1,'']]],
+  ['string_3a_10',['string:',['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html#autotoc_md7',1,'Remove all whitespace from a string:'],['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html#autotoc_md6',1,'Separate a string:']]],
+  ['stringifymap_11',['stringifyMap',['../stevensStringLib_8h.html#a6d11bd6e262a33a72a8bf8ea3e2d2829',1,'stevensStringLib']]],
+  ['stringtobool_12',['stringToBool',['../stevensStringLib_8h.html#a66cee1aced824a0f8ee615dbf7035478',1,'stevensStringLib']]],
+  ['systems_20llc_20beldum_5fpackage_5fmanager_13',['Beldum Package Manager: https://github.com/Nord-Tech-Systems-LLC/beldum_package_manager',['../md__2home_2runner_2work_2stevensStringLib_2stevensStringLib_2README.html#autotoc_md3',1,'']]]
 ];

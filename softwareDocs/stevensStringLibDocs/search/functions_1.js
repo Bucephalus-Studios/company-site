@@ -4,9 +4,10 @@ var searchData=
   ['charcount_1',['charCount',['../stevensStringLib_8h.html#a64a34b10b9145c0632956c3d4fe825f0',1,'stevensStringLib']]],
   ['chartostring_2',['charToString',['../stevensStringLib_8h.html#a6af188690b2237371c369d748223b193',1,'stevensStringLib']]],
   ['circularindex_3',['circularIndex',['../stevensStringLib_8h.html#ae775d89cee34ccaaf5c144f2266f4eaf',1,'stevensStringLib']]],
-  ['contains_4',['contains',['../stevensStringLib_8h.html#af83dd4ced359aa4728438f8e469e6f2e',1,'stevensStringLib::contains(const std::string_view &amp;str, const std::string_view &amp;substring)'],['../stevensStringLib_8h.html#aaee6af848c3910d695c0c191dd182c7d',1,'stevensStringLib::contains(const std::string_view &amp;str, const char ch)']]],
-  ['containsonly_5',['containsOnly',['../stevensStringLib_8h.html#a32ffddbdb3678e6b288f2950cc9bce27',1,'stevensStringLib']]],
-  ['countfilelines_6',['countFileLines',['../stevensStringLib_8h.html#af737e054dda2d8cc062e45c288304b6e',1,'stevensStringLib']]],
-  ['countlines_7',['countLines',['../stevensStringLib_8h.html#aa0f3a5f620ba28f0fb0061b2cf54cde7',1,'stevensStringLib']]],
-  ['csvappend_8',['csvAppend',['../stevensStringLib_8h.html#af43e43c8ee6cd84e832998e00c8564fc',1,'stevensStringLib']]]
+  ['codepointdisplaywidth_4',['codepointDisplayWidth',['../namespacestevensStringLib_1_1detail.html#a015d92c47a9fc3d711563b04961762a8',1,'stevensStringLib::detail']]],
+  ['contains_5',['contains',['../stevensStringLib_8h.html#af83dd4ced359aa4728438f8e469e6f2e',1,'stevensStringLib::contains(const std::string_view &amp;str, const std::string_view &amp;substring)'],['../stevensStringLib_8h.html#aaee6af848c3910d695c0c191dd182c7d',1,'stevensStringLib::contains(const std::string_view &amp;str, const char ch)']]],
+  ['containsonly_6',['containsOnly',['../stevensStringLib_8h.html#a32ffddbdb3678e6b288f2950cc9bce27',1,'stevensStringLib']]],
+  ['countfilelines_7',['countFileLines',['../stevensStringLib_8h.html#af737e054dda2d8cc062e45c288304b6e',1,'stevensStringLib']]],
+  ['countlines_8',['countLines',['../stevensStringLib_8h.html#aa0f3a5f620ba28f0fb0061b2cf54cde7',1,'stevensStringLib']]],
+  ['csvappend_9',['csvAppend',['../stevensStringLib_8h.html#af43e43c8ee6cd84e832998e00c8564fc',1,'stevensStringLib']]]
 ];
