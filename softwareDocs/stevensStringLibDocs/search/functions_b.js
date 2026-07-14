@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['unorderedmapifystring_0',['unorderedMapifyString',['../stevensStringLib_8h.html#af0e9087ef54deb687c501000f3516de6',1,'stevensStringLib']]],
-  ['utf32to8_1',['utf32to8',['../stevensStringLib_8h.html#ad855311a58d85b0874007beff5030490',1,'stevensStringLib']]],
-  ['utf8length_2',['utf8Length',['../stevensStringLib_8h.html#a2b47e1f40ebd4981204774150011271e',1,'stevensStringLib']]],
-  ['utf8resize_3',['utf8Resize',['../stevensStringLib_8h.html#aa5764a0e40220ec9fb06b6ce14e3d949',1,'stevensStringLib']]],
-  ['utf8to32_4',['utf8to32',['../stevensStringLib_8h.html#a7cee8f21ec68884f226068c732820321',1,'stevensStringLib']]]
+  ['tolower_0',['toLower',['../stevensStringLib_8h.html#acd42f6dfa6de31b27f58781c57a7762e',1,'stevensStringLib']]],
+  ['toupper_1',['toUpper',['../stevensStringLib_8h.html#a9c0bf954dd6582f3d6d8781f079689f2',1,'stevensStringLib']]],
+  ['trim_2',['trim',['../stevensStringLib_8h.html#a5d846cb4529597c7fd190c026892ff6d',1,'stevensStringLib']]],
+  ['trimwhitespace_3',['trimWhitespace',['../stevensStringLib_8h.html#a3fe6e850aed7869e0cf82a93c42820c1',1,'stevensStringLib']]]
 ];

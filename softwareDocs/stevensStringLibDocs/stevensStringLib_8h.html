@@ -94,6 +94,7 @@ $(function() {
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;random&gt;</code><br />
 <code>#include &lt;utf8.h&gt;</code><br />
+<code>#include &lt;utf8proc.h&gt;</code><br />
 </div>
 <p><a href="stevensStringLib_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -176,8 +177,10 @@ Functions</h2></td></tr>
 <tr class="separator:af737e054dda2d8cc062e45c288304b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13c805758cc20928ee0473b0e0f05b85" id="r_a13c805758cc20928ee0473b0e0f05b85"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a13c805758cc20928ee0473b0e0f05b85">stevensStringLib::wrapToWidth</a> (const std::string &amp;str, size_t wrapWidth)</td></tr>
 <tr class="separator:a13c805758cc20928ee0473b0e0f05b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b47e1f40ebd4981204774150011271e" id="r_a2b47e1f40ebd4981204774150011271e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a2b47e1f40ebd4981204774150011271e">stevensStringLib::utf8Length</a> (const std::string_view &amp;utf8Str)</td></tr>
-<tr class="separator:a2b47e1f40ebd4981204774150011271e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a34b10b9145c0632956c3d4fe825f0" id="r_a64a34b10b9145c0632956c3d4fe825f0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a64a34b10b9145c0632956c3d4fe825f0">stevensStringLib::charCount</a> (const std::string_view &amp;str)</td></tr>
+<tr class="separator:a64a34b10b9145c0632956c3d4fe825f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8dc9851158bfd9d2b6870fa873151ea" id="r_aa8dc9851158bfd9d2b6870fa873151ea"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#aa8dc9851158bfd9d2b6870fa873151ea">stevensStringLib::lineDisplayWidth</a> (const std::string_view &amp;str)</td></tr>
+<tr class="separator:aa8dc9851158bfd9d2b6870fa873151ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5764a0e40220ec9fb06b6ce14e3d949" id="r_aa5764a0e40220ec9fb06b6ce14e3d949"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#aa5764a0e40220ec9fb06b6ce14e3d949">stevensStringLib::utf8Resize</a> (const std::string_view &amp;utf8Str, size_t desiredLength, char fillChar=' ')</td></tr>
 <tr class="separator:aa5764a0e40220ec9fb06b6ce14e3d949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cee8f21ec68884f226068c732820321" id="r_a7cee8f21ec68884f226068c732820321"><td class="memItemLeft" align="right" valign="top">std::u32string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a7cee8f21ec68884f226068c732820321">stevensStringLib::utf8to32</a> (const std::string_view &amp;utf8Str)</td></tr>
@@ -306,6 +309,46 @@ Functions</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">std::string</td><td>- The string str with the first letter capitalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a64a34b10b9145c0632956c3d4fe825f0" name="a64a34b10b9145c0632956c3d4fe825f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a34b10b9145c0632956c3d4fe825f0">&#9670;&#160;</a></span>charCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t stevensStringLib::charCount </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the number of Unicode codepoints (characters) in a UTF-8 encoded std::string.</p>
+<p>Naming convention used throughout stevensStringLib: length() (std::string's own) means byte count; charCount() means codepoint (character) count. A single multi-byte character (Cyrillic, CJK, box-drawing glyphs, etc.) counts as 1 here, not 2-4 like it would under length(). Streams over str counting codepoint boundaries directly (utf8::distance()) rather than materializing a std::u32string - this only needs a single linear pass, no random access. Backed by utf8cpp, which throws utf8::invalid_utf8 on malformed input rather than silently miscounting.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>- A UTF-8 encoded std::string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">size_t</td><td>- The number of codepoints (characters) in str. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1529,6 +1572,53 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa8dc9851158bfd9d2b6870fa873151ea" name="aa8dc9851158bfd9d2b6870fa873151ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8dc9851158bfd9d2b6870fa873151ea">&#9670;&#160;</a></span>lineDisplayWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t stevensStringLib::lineDisplayWidth </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the display width (in terminal columns) of a single line of UTF-8 encoded text.</p>
+<p>Codepoint count (charCount()) is not the same as display width: most characters (Latin, Cyrillic, etc.) occupy 1 terminal column, but CJK/fullwidth characters occupy 2, and combining marks occupy 0. This sums each codepoint's actual column width via utf8proc_charwidth() (the Unicode East Asian Width property), so a 5-codepoint CJK string correctly reports width 10, not width 5.</p>
+<p>Like POSIX wcswidth(), this is only defined for a single line: throws if str contains a line break (LF, CR, or the Unicode line/paragraph separators), the same way wcswidth() returns -1 (undefined) rather than silently summing across line breaks as if they were printable content. Split multi-line text into individual lines and call this per line.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>- A single line of UTF-8 encoded text (no embedded line breaks).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">size_t</td><td>- The number of terminal columns str would occupy when displayed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if str contains a line break. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a93a3b051465b829d63a0c0867193f4cb" name="a93a3b051465b829d63a0c0867193f4cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a93a3b051465b829d63a0c0867193f4cb">&#9670;&#160;</a></span>mapifyString()</h2>
 
@@ -2377,46 +2467,6 @@ template&lt;typename T &gt; </div>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">std::string</td><td>- The same characters, UTF-8 encoded. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a2b47e1f40ebd4981204774150011271e" name="a2b47e1f40ebd4981204774150011271e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b47e1f40ebd4981204774150011271e">&#9670;&#160;</a></span>utf8Length()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t stevensStringLib::utf8Length </td>
-          <td>(</td>
-          <td class="paramtype">const std::string_view &amp;&#160;</td>
-          <td class="paramname"><em>utf8Str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return the number of Unicode codepoints (characters) in a UTF-8 encoded std::string.</p>
-<p>Unlike std::string::length()/size(), which count bytes, this counts characters - a single multi-byte character (Cyrillic, CJK, box-drawing glyphs, etc.) counts as 1, not 2-4. Backed by utf8cpp, which throws utf8::invalid_utf8 on malformed input rather than silently miscounting.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">utf8Str</td><td>- A UTF-8 encoded std::string.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">size_t</td><td>- The number of codepoints (characters) in utf8Str. </td></tr>
   </table>
   </dd>
 </dl>
