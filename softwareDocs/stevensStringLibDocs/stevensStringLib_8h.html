@@ -197,8 +197,8 @@ Functions</h2></td></tr>
 <tr class="separator:aa8dc9851158bfd9d2b6870fa873151ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ce7f7a50ed7028b828925ee455e6bdb" id="r_a9ce7f7a50ed7028b828925ee455e6bdb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a9ce7f7a50ed7028b828925ee455e6bdb">stevensStringLib::resizeToCodepoints</a> (const std::string_view &amp;utf8Str, size_t desiredLength, char fillChar=' ')</td></tr>
 <tr class="separator:a9ce7f7a50ed7028b828925ee455e6bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4e99e31943aa743a493181395e52efb" id="r_ab4e99e31943aa743a493181395e52efb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#ab4e99e31943aa743a493181395e52efb">stevensStringLib::resizeToDisplayWidth</a> (const std::string_view &amp;utf8Str, size_t desiredWidth, char fillChar=' ')</td></tr>
-<tr class="separator:ab4e99e31943aa743a493181395e52efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a724d3794f648aa584936792a1c49ffa8" id="r_a724d3794f648aa584936792a1c49ffa8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a724d3794f648aa584936792a1c49ffa8">stevensStringLib::resizeToDisplayWidth</a> (const std::string_view &amp;utf8Str, size_t desiredWidth, char fillChar=' ', const std::string_view &amp;truncationSuffix=&quot;&quot;)</td></tr>
+<tr class="separator:a724d3794f648aa584936792a1c49ffa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cee8f21ec68884f226068c732820321" id="r_a7cee8f21ec68884f226068c732820321"><td class="memItemLeft" align="right" valign="top">std::u32string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#a7cee8f21ec68884f226068c732820321">stevensStringLib::utf8to32</a> (const std::string_view &amp;utf8Str)</td></tr>
 <tr class="separator:a7cee8f21ec68884f226068c732820321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad855311a58d85b0874007beff5030490" id="r_ad855311a58d85b0874007beff5030490"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stevensStringLib_8h.html#ad855311a58d85b0874007beff5030490">stevensStringLib::utf32to8</a> (const std::u32string_view &amp;utf32Str)</td></tr>
@@ -1969,8 +1969,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ab4e99e31943aa743a493181395e52efb" name="ab4e99e31943aa743a493181395e52efb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4e99e31943aa743a493181395e52efb">&#9670;&#160;</a></span>resizeToDisplayWidth()</h2>
+<a id="a724d3794f648aa584936792a1c49ffa8" name="a724d3794f648aa584936792a1c49ffa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a724d3794f648aa584936792a1c49ffa8">&#9670;&#160;</a></span>resizeToDisplayWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1994,7 +1994,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>fillChar</em> = <code>'&#160;'</code>&#160;</td>
+          <td class="paramname"><em>fillChar</em> = <code>'&#160;'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string_view &amp;&#160;</td>
+          <td class="paramname"><em>truncationSuffix</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2010,11 +2016,13 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Resize a UTF-8 encoded std::string to an exact display width (in terminal columns) rather than codepoint count - the display-width-aware sibling of resizeToCodepoints().</p>
 <p>resizeToCodepoints() truncates/pads by codepoint count, so on double-width content (CJK, fullwidth punctuation) the resulting string's actual on-screen width can differ from what was asked for (e.g. resizing to 5 codepoints of CJK text yields 10 display columns, not 5). This truncates/pads by display width instead, so the result occupies exactly desiredWidth columns on screen - except in the edge case where a single leading double-width codepoint alone exceeds desiredWidth, where it is still included rather than dropped entirely (a glyph can't be half-truncated - same tradeoff documented on findWrapCut()).</p>
+<p>One function handles both directions (truncate OR pad) because callers laying out a fixed- width column want "make this exactly N columns" as a single operation, not two functions to pick between depending on the input's length.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">utf8Str</td><td>- A UTF-8 encoded std::string to resize. </td></tr>
     <tr><td class="paramname">desiredWidth</td><td>- The desired display width (terminal columns) of the result. </td></tr>
-    <tr><td class="paramname">fillChar</td><td>- The (single-byte, single-column) character to pad with if growing.</td></tr>
+    <tr><td class="paramname">fillChar</td><td>- The (single-byte, single-column) character to pad with if growing. </td></tr>
+    <tr><td class="paramname">truncationSuffix</td><td>- Appended when truncating (e.g. "..." or " (+3 more)"), so a cut- off value reads as truncated rather than merely short. Ignored when padding. Counted against desiredWidth: if the suffix alone is as wide as desiredWidth, it's dropped and the cut falls back to plain truncation rather than emitting only the suffix.</td></tr>
   </table>
   </dd>
 </dl>

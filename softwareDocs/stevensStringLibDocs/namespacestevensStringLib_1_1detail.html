@@ -224,7 +224,7 @@ it fit" and "where's the best break point" in one pass with no std::u32string de
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Given a single line of UTF-8 text (no embedded line breaks) and a maximum display width (in terminal columns), return the byte offset marking the end of the longest leading prefix that fits within maxWidth columns. Unlike <a class="el" href="namespacestevensStringLib_1_1detail.html#a8ba67baafac0bbb11dffd2c422d4d704">findWrapCut()</a>, this has no concept of "words" to avoid splitting - a straight truncation. Implementation detail behind the public <a class="el" href="stevensStringLib_8h.html#ab4e99e31943aa743a493181395e52efb">resizeToDisplayWidth()</a> - see that function's doc comment for the public API.</p>
+<p>Given a single line of UTF-8 text (no embedded line breaks) and a maximum display width (in terminal columns), return the byte offset marking the end of the longest leading prefix that fits within maxWidth columns. Unlike <a class="el" href="namespacestevensStringLib_1_1detail.html#a8ba67baafac0bbb11dffd2c422d4d704">findWrapCut()</a>, this has no concept of "words" to avoid splitting - a straight truncation. Implementation detail behind the public <a class="el" href="stevensStringLib_8h.html#a724d3794f648aa584936792a1c49ffa8">resizeToDisplayWidth()</a> - see that function's doc comment for the public API.</p>
 <p>Same forward-progress guarantee as <a class="el" href="namespacestevensStringLib_1_1detail.html#a8ba67baafac0bbb11dffd2c422d4d704">findWrapCut()</a>: a non-empty line always yields at least one codepoint's worth of bytes, even if that codepoint alone exceeds maxWidth.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
