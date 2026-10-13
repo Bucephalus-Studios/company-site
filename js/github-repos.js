@@ -102,7 +102,7 @@ async function loadGitHubRepos() {
         const header = `
             <div style="text-align: center; margin-bottom: 20px;">
                 <h3 align="center">
-                    <img src="assets/c++ library cooltext.png" alt="C++ Libraries">
+                    <img src="assets/c++ library cooltext.png" alt="C++ Libraries" class="img-fluid">
                 </h3>
                 <p class="consoleCyan"> (${repos.length} items)</p>
                 <p>
